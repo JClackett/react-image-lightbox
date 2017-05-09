@@ -98,8 +98,10 @@ class ReactImageLightbox extends Component {
         this.requestMoveNext          = this.requestMoveNext.bind(this);
         this.requestMovePrev          = this.requestMovePrev.bind(this);
     }
-
     componentWillMount() {
+        // Set Element for modal
+        Modal.setAppElement('body');
+
         // Timeouts - always clear it before umount
         this.timeouts = [];
 
